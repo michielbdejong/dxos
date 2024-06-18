@@ -38,7 +38,7 @@ test.describe('Collaboration tests', () => {
     await guest.init();
   });
 
-  test.only('guest joins host’s space', async () => {
+  test('guest joins host’s space', async () => {
     // Host creates a space and adds a markdown object
     await host.createSpace();
     await host.createObject('markdownPlugin');
