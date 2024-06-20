@@ -29,6 +29,10 @@ test.describe('Stack tests', () => {
 
   test.only('create new document section', async () => {
     await host.createSpace();
+
+    // Close all planks
+    await host.planks.closeAll();
+
     await host.createCollection(1);
     await Stack.createSection(host.page, 'markdownPlugin');
     const stack = Stack.getStack(host.page);
