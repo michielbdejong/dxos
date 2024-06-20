@@ -41,7 +41,7 @@ test.describe('Basic tests', () => {
     await host.createSpace();
     await host.createObject('markdownPlugin');
 
-    const editorPlank = host.planks.getPlanks({ filter: 'markdown' })[0].locator;
+    const editorPlank = (await host.planks.getPlanks({ filter: 'markdown' }))[0].locator;
     const textBox = Markdown.getMarkdownTextboxWithLocator(editorPlank);
 
     await waitForExpect(async () => {
