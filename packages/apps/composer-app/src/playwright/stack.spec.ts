@@ -27,7 +27,7 @@ test.describe('Stack tests', () => {
     });
   });
 
-  test.only('create new document section', async () => {
+  test('create new document section', async () => {
     await host.createSpace();
 
     // Close all planks
